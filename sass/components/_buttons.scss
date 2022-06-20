@@ -22,6 +22,7 @@
     display: flex;
 }
 .intro__btn {
+    font-family: "Bai Jamjuree";
     background-image: linear-gradient(to right, $brand-color 0%, #F45C43  51%, $brand-color 100%);
     margin: 10px;
     padding: 15px 45px;
@@ -41,7 +42,6 @@
     text-decoration: none;
 }
 .intro__btn:first-child {
-    
     
     background-color: $text-color;
     color: $white-color;
