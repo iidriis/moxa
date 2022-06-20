@@ -1,5 +1,30 @@
 .table {
+    margin-bottom: 12.2rem;
     @include container(1100px);
-    display: none;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        list-style: none;
+        border: solid 2px $text-color;
+        padding: 0;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 2.2rem 1rem 2.4rem;
+        span {
+            @include title-left;
+            margin-bottom: 1.1rem;
+        }
+        p {
+            font-size: 1.6rem;
+            letter-spacing: 1.28px;
+            text-transform: uppercase;
+        }
+    }
+    &__item:nth-child(2) {
+        background-color: $text-color;
+        color: $white-color;
+    }
 }
