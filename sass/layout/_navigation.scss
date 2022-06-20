@@ -6,6 +6,8 @@
         list-style: none;
     }
     &__link {
+        transition: 0.5s ease;
+        color: $text-color;
         text-decoration: none;
         text-transform: capitalize;
         font-weight: 400;
@@ -13,13 +15,17 @@
         line-height: 1.5;
         border-bottom: 1px solid #131416;
     }
+    &__link:hover{
+        color: $brand-color;
+        border-bottom: 1px solid $brand-color;
+    }
     &__link:not(:last-child) {
         margin-right: 3.2rem;
     }
     &__link-active {
         color: $brand-color;
-        font-weight: bold;
-        border-bottom: 2px solid $brand-color;
+        font-weight: 400;
+        border-bottom: 1px solid $brand-color;
     }
     @include responsive(phone) {
         display: none;

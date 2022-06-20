@@ -1,10 +1,13 @@
 .site-header__btn {
+    transition: 0.5s ease;
     @include site-btn(.9rem 2.6rem);
     @include responsive(phone) {
         display: none;
     }
 }
 .site-header__btn:hover {
+    border: 1px solid $brand-color;
+    color: $brand-color;
     opacity: .8;
 }
 .site-header__btn:active {
@@ -12,19 +15,58 @@
 }
 
 .intro__btn-wrapper {
+    @include responsive(m-phone){
+        flex-direction: column;
+        
+    }
     display: flex;
 }
+.intro__btn {
+    background-image: linear-gradient(to right, $brand-color 0%, #F45C43  51%, $brand-color 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px none;
+    border-radius: 10px;
+    display: block;
+}
+
+.intro__btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
 .intro__btn:first-child {
+    
+    
     background-color: $text-color;
     color: $white-color;
     @include site-btn(1.3rem 3.3rem);
+    border-radius: 5px;
+    margin: 0;
+    margin-right: 10;
+    border: none;
     @include responsive(m-phone) {
+        border: none;
+        border-radius: 80% 80% 0px 0px;
+        margin: 0;
         font-size: 1.2rem;
     }
 }
+
 .intro__btn:last-child {
     @include site-btn(1.3rem 3.3rem);
+    border-radius: 5px;
+    margin: 0 0 0 1rem;
+    border: none;
     @include responsive(m-phone) {
+        border: none;
+        border-radius: 0 0 80% 80%;
+        margin: 0;
         font-size: 1.2rem;
     }
 }
