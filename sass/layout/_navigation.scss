@@ -1,0 +1,27 @@
+.sitenav {
+    display: flex;
+    &__list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+    }
+    &__link {
+        text-decoration: none;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        border-bottom: 1px solid #131416;
+    }
+    &__link:not(:last-child) {
+        margin-right: 3.2rem;
+    }
+    &__link-active {
+        color: $brand-color;
+        font-weight: bold;
+        border-bottom: 2px solid $brand-color;
+    }
+    @include responsive(phone) {
+        display: none;
+    }
+}

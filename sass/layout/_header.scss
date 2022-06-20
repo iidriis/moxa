@@ -1,0 +1,39 @@
+.site-header {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2.7rem 0;
+        @include container(1320px);
+    }
+
+    &__logo-link {
+        display: flex;
+        &__logo-img {
+            width: 131px;
+            height: 32px;
+            object-fit: contain;
+        }
+    }
+}
+
+.site-header__logo-img:hover {
+    opacity: 0.8;
+}
+.site-header__logo-img:active {
+    opacity: 0.6;
+}
+
+.site-header__burger {
+    border: none;
+    display: none;
+    background-color: $site-bgc;
+    @include responsive(phone) {
+        display: block;
+    }
+}
+.site-header__burger-img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}

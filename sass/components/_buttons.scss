@@ -1,0 +1,30 @@
+.site-header__btn {
+    @include site-btn(.9rem 2.6rem);
+    @include responsive(phone) {
+        display: none;
+    }
+}
+.site-header__btn:hover {
+    opacity: .8;
+}
+.site-header__btn:active {
+    opacity: .6;
+}
+
+.intro__btn-wrapper {
+    display: flex;
+}
+.intro__btn:first-child {
+    background-color: $text-color;
+    color: $white-color;
+    @include site-btn(1.3rem 3.3rem);
+    @include responsive(m-phone) {
+        font-size: 1.2rem;
+    }
+}
+.intro__btn:last-child {
+    @include site-btn(1.3rem 3.3rem);
+    @include responsive(m-phone) {
+        font-size: 1.2rem;
+    }
+}
